@@ -6,7 +6,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
 	entry: './src/index.js',
 	output: {
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, 'build'),
 		filename: 'my-webpack-bundle.js'
 	},
 	module: {
@@ -30,7 +30,7 @@ module.exports = {
 		new MiniCssExtractPlugin({ filename: "style.css" }),
 	],
 	devServer: {
-		contentBase: path.join(__dirname, 'dist'),
+		contentBase: path.join(__dirname, 'build'),
 		compress: true,
 		port: 2013
 	}
